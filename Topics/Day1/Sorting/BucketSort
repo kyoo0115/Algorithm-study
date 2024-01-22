@@ -1,0 +1,59 @@
+# 버킷 정렬 (Bucket Sort)
+
+## 버킷 정렬이란?
+
+버킷 정렬은 비교 기반 정렬 알고리즘 중 하나로, 요소를 여러 개의 버킷(또는 컨테이너)에 나누어 넣고 각 버킷을 개별적으로 정렬하는 방식을 사용합니다. 이후 정렬된 버킷을 순서대로 결합하여 정렬된 결과를 얻습니다. 버킷 정렬은 입력 데이터의 분포가 균일할 때 가장 효과적으로 작동하며, 특히 실수 형태의 데이터를 정렬할 때 유용합니다.
+
+## 정렬 과정 설명 및 다이어그램
+- 버킷 정렬은 입력 데이터를 일정한 범위를 갖는 여러 버킷으로 나눕니다.
+- 각 버킷에 요소를 삽입한 후 각 버킷을 개별적으로 정렬합니다.
+- 정렬된 버킷을 순서대로 결합하여 정렬된 결과를 얻습니다.
+
+<img src= "./images/BucketSort.png" width="1156">
+
+- 입력 데이터를 여러 개의 버킷으로 나눕니다.
+- 각 버킷에 요소를 삽입합니다.
+- 각 버킷을 개별적으로 정렬합니다.
+- 정렬된 버킷을 순서대로 결합하여 정렬된 결과를 얻습니다.
+
+## 코드 예제 (Java)
+
+```java
+import java.util.*;
+
+public class BucketSort {
+
+    public static void bucketSort(double[] array) {
+        int n = array.length;
+        if (n <= 0) {
+            return;
+        }
+
+        List<List<Double>> buckets = new ArrayList<>(n);
+
+        // 버킷 초기화
+        for (int i = 0; i < n; i++) {
+            buckets.add(new ArrayList<>());
+        }
+
+        // 데이터를 버킷에 분배
+        for (int i = 0; i < n; i++) {
+            int bucketIndex = (int) (n * array[i]);
+            buckets.get(bucketIndex).add(array[i]);
+        }
+
+        // 각 버킷을 정렬
+        for (List<Double> bucket : buckets) {
+            Collections.sort(bucket);
+        }
+
+        // 정렬된 버킷을 결합
+        int index = 0;
+        for (List<Double> bucket : buckets) {
+            for (Double value : bucket) {
+                array[index++] = value;
+            }
+        }
+    }
+}
+```

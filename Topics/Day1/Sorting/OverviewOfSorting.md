@@ -6,7 +6,7 @@
 
 <br>
 
-<img src="./images/Sorting.png" width="2958"> 
+<img src="images/Sorting.png" width="2958"> 
 
 <br>
 
