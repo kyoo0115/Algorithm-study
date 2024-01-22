@@ -35,7 +35,7 @@ public class TwoPointersExample1 {
 ```
 - 이 예제에서 투 포인터는 배열 nums에서 합이 target인 두 숫자의 인덱스를 찾습니다. 배열은 정렬되어 있어야 합니다.
 
-예제 2: 배열에서 세 숫자의 합이 특정 값인 경우 찾기
+## 예제 2: 배열에서 세 숫자의 합이 특정 값인 경우 찾기
 ```java
 import java.util.*;
 
@@ -75,9 +75,9 @@ public class TwoPointersExample2 {
 }
 ```
 
-- 이 예제에서 이중 포인터는 배열 nums에서 합이 target인 세 숫자 조합을 찾습니다. 배열은 정렬되어 있어야 하며 중복된 조합을 제거합니다.
-- 이중 포인터 알고리즘은 배열 또는 리스트에서 두 개의 포인터를 사용하여 다양한 문제를 효과적으로 해결할 수 있습니다.
-
+- 이 예제에서 투 포인터는 배열 nums에서 합이 target인 세 숫자 조합을 찾습니다. 배열은 정렬되어 있어야 하며 중복된 조합을 제거합니다.
+- 투 포인터 알고리즘은 배열 또는 리스트에서 두 개의 포인터를 사용하여 다양한 문제를 효과적으로 해결할 수 있습니다.
+- 단, 정렬이 된 배열 또는 리스트에서만 사용할 수 있습니다.
 ## 문제 출처: 
 1. [LeetCode - Two Sum](https://leetcode.com/problems/two-sum/)
 2. [LeetCode - 3Sum](https://leetcode.com/problems/3sum/)
